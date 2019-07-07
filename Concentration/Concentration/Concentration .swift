@@ -36,7 +36,7 @@ class Concentration{
             assert(cards.indices.contains(index), "Concentration.chooseCard: chosen index not in the cards")
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index{
                 //check if cards match
-                if cards[matchIndex].identifier == cards[index].identifier{
+                if cards[matchIndex] == cards[index]{
                     cards[matchIndex].isMactched = true
                     cards[index].isMactched = true
                 }

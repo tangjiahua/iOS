@@ -9,10 +9,10 @@
 import Foundation
 //No inherit
 //Are value types, provide copy; class is reference type,pointers, stacks
-struct Card{
+struct Card: Hashable{
     var isFaceup = false
     var isMactched = false
-    var identifier: Int
+    private var identifier: Int
     
     private static var identifierFactory = 0
     
