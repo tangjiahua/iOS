@@ -9,9 +9,9 @@
 import Foundation
 //a model independent ui
 class Concentration{
-    var cards = [Card]()
+    private(set) var cards = [Card]()
     
-    var indexOfOneAndOnlyFaceUpCard: Int?{
+    private var indexOfOneAndOnlyFaceUpCard: Int?{
         get {
             var foundIndex: Int?
             for index in cards.indices{
@@ -33,6 +33,7 @@ class Concentration{
     func chooseCard(at index: Int){
         
         if !cards[index].isMactched{
+            assert(cards.indices.contains(index), "Concentration.chooseCard: chosen index not in the cards")
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index{
                 //check if cards match
                 if cards[matchIndex].identifier == cards[index].identifier{
@@ -40,19 +41,14 @@ class Concentration{
                     cards[index].isMactched = true
                 }
                 cards[index].isFaceup = true
-//                indexOfOneAndOnlyFaceUpCard = nil
             }else{
-                //either no cards or 2 cards are face up
-//                for flipDownIndex in cards.indices{
-//                    cards[flipDownIndex].isFaceup = false
-//                }
-//                cards[index].isFaceup = true
                 indexOfOneAndOnlyFaceUpCard = index
             }
         }
     }
     
     init(numberOfPairsOfCards: Int){
+        assert(numberOfPairsOfCards > 0, "you must have at least one pair of cards")
         for _ in 1...numberOfPairsOfCards{
             let card = Card()
             cards += [card, card]
