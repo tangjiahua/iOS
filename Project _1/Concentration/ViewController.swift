@@ -23,6 +23,14 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func StartNewGame(_ sender: UIButton) {
+        
+        game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
+        updateViewFromModel()
+        flipCount = 0
+    }
+    
+    
     @IBOutlet private weak var countLabel: UILabel!
     @IBOutlet private var cardsButton: [UIButton]!
     
