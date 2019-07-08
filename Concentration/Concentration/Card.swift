@@ -10,6 +10,12 @@ import Foundation
 //No inherit
 //Are value types, provide copy; class is reference type,pointers, stacks
 struct Card: Hashable{
+    
+    var hashValue: Int{return identifier}
+    
+    static func ==(lhs: Card, rhs: Card)->Bool{
+        return lhs.identifier == rhs.identifier
+    }
     var isFaceup = false
     var isMactched = false
     private var identifier: Int
