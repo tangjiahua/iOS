@@ -31,8 +31,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
             endingLineNumber = "34"
-            landmarkName = "indexOfOneAndOnlyFaceUpCard"
-            landmarkType = "24">
+            landmarkName = "chooseCard(at:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -47,7 +47,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "chooseCard(at:)"
+            landmarkName = "init(numberOfPairsOfCards:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
