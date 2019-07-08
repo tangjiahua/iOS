@@ -17,16 +17,17 @@ class ViewController: UIViewController {
         return (cardsButton.count + 1) / 2
     }
     
-    private(set) var flipCount = 0 {
-        didSet {
-            countLabel.text = "Flips: \(flipCount)"
-        }
-    }
+
+//    var flipCount = 0 {
+//        didSet {
+//            countLabel.text = "Flips: \(flipCount)"
+//        }
+//    }
     
     @IBAction func StartNewGame(_ sender: UIButton) {
         game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
         updateViewFromModel()
-        flipCount = 0
+        game.flipCount = 0
         check = [0, 0, 0, 0, 0, 0, 0,0,0,0,0,0]
         i = 0
         t = emojiChoices.count.arc4random
@@ -37,7 +38,7 @@ class ViewController: UIViewController {
     @IBOutlet private var cardsButton: [UIButton]!
     
     @IBAction private func touchCard(_ sender: UIButton) {
-        flipCount += 1
+       
         if let cardNumber = cardsButton.index(of: sender) {
             game.chooseCard(at: cardNumber)
             updateViewFromModel()
@@ -48,6 +49,7 @@ class ViewController: UIViewController {
     
     
     private func updateViewFromModel() {
+        countLabel.text = "Flips: \(game.flipCount)"
         for index in cardsButton.indices {
             let button = cardsButton[index]
             let card = game.cards[index]

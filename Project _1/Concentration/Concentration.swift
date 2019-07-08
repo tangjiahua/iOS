@@ -33,21 +33,33 @@ struct Concentration {
         }
     }
     
+    lazy var flipCount = 0
+    
     mutating func chooseCard(at index: Int) {
         assert(cards.indices.contains(index), "Concentration.chooseCard(at: \(index)): chosen index")
         if !cards[index].isMatched {
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
+                
                 // check if cards match
                 if cards[matchIndex].identifier == cards[index].identifier {
                     cards[matchIndex].isMatched = true
                     cards[index].isMatched = true
+                    flipCount += 2
                 }
+                else{
+                    if cards[index].FaceUped == true, cards[matchIndex].FaceUped == true{
+                        flipCount -= 1
+                    }
+                }
+                
                 cards[index].isFaceUp = true
+                
             } else {
                 // either no card or two cards face up
                 indexOfOneAndOnlyFaceUpCard = index
+                
             }
-            
+            cards[index].FaceUped = true
         }
     }
     
