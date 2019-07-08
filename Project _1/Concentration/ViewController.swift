@@ -65,12 +65,12 @@ class ViewController: UIViewController {
     private var emoji_fruit = ["🍏","🍎","🍐","🍊","🍋","🍌","🍉","🍇","🍓","🍈","🍒","🍑"]
     private var emoji_buildings = ["⛩","🕋","🕍","🕌","⛪️","🏛","💒","🏩","🏫","🏪","🏨","🏦"]
     private var emoji_ramdom = ["🦇", "😱", "🙀", "😈", "🎃", "👻", "🍭", "🍬", "🍎", "🐜", "🐍", "🦀"]
+    
     private var emojiChoices = [emoji_faces, emoji_animals, emoji_flags, emoji_fruit, emoji_buildings, emoji_ramdom]
     
     private var emoji = [Int: String]()
-    
+    var choice = emojiChoices.count.arc4random()
     private func emoji(for card: Card) -> String {
-        var choice = emojiChoices.count.arc4random()
         if emoji[card.identifier] == nil, emojiChoices[choice].count > 0 {
             emoji[card.identifier] = emojiChoices[choice].remove(at: emojiChoices[choice].count.arc4random)
         }
