@@ -24,10 +24,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func StartNewGame(_ sender: UIButton) {
-        
         game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
         updateViewFromModel()
         flipCount = 0
+        check = [0, 0, 0, 0, 0, 0, 0,0,0,0,0,0]
+        i = 0
+        t = emojiChoices.count.arc4random
     }
     
     
@@ -59,6 +61,7 @@ class ViewController: UIViewController {
             }
         }
     }
+    
     private var emoji_faces = ["😀","😅","😇","😢","😳","🤓","😜","😠","😫","🧐","🥰","😍"]
     private var emoji_animals = ["🐶","🐱","🐭","🐹","🐰","🦊","🐻","🐼","🐨","🐯","🦁","🐮"]
     private var emoji_flags = ["🏳️","🏴","🏴‍☠️","🏁","🚩","🏳️‍🌈","🇺🇳","🇦🇫","🇦🇽","🇦🇱","🇩🇿","🇦🇸"]
@@ -66,13 +69,22 @@ class ViewController: UIViewController {
     private var emoji_buildings = ["⛩","🕋","🕍","🕌","⛪️","🏛","💒","🏩","🏫","🏪","🏨","🏦"]
     private var emoji_ramdom = ["🦇", "😱", "🙀", "😈", "🎃", "👻", "🍭", "🍬", "🍎", "🐜", "🐍", "🦀"]
     
-    private var emojiChoices = [emoji_faces, emoji_animals, emoji_flags, emoji_fruit, emoji_buildings, emoji_ramdom]
+    lazy private var emojiChoices = [emoji_animals, emoji_faces,emoji_flags, emoji_fruit, emoji_buildings, emoji_ramdom]
     
     private var emoji = [Int: String]()
-    var choice = emojiChoices.count.arc4random()
+    
+    lazy private var t = emojiChoices.count.arc4random
+    
+    var i = 0
+    var check = [0, 0, 0, 0, 0, 0,0,0,0,0,0,0]
     private func emoji(for card: Card) -> String {
-        if emoji[card.identifier] == nil, emojiChoices[choice].count > 0 {
-            emoji[card.identifier] = emojiChoices[choice].remove(at: emojiChoices[choice].count.arc4random)
+        if emoji[card.identifier] == nil{
+            i = 0
+            while(check[i] != 0){
+                i = emojiChoices[t].count.arc4random
+            }
+            check[i] = 1
+            emoji[card.identifier] = emojiChoices[t][i]
         }
         return emoji[card.identifier] ?? "?"
     }
