@@ -59,13 +59,20 @@ class ViewController: UIViewController {
             }
         }
     }
-    private var emojiChoices =  ["🦇", "😱", "🙀", "😈", "🎃", "👻", "🍭", "🍬", "🍎", "🐜", "🐍", "🦀"]
+    private var emoji_faces = ["😀","😅","😇","😢","😳","🤓","😜","😠","😫","🧐","🥰","😍"]
+    private var emoji_animals = ["🐶","🐱","🐭","🐹","🐰","🦊","🐻","🐼","🐨","🐯","🦁","🐮"]
+    private var emoji_flags = ["🏳️","🏴","🏴‍☠️","🏁","🚩","🏳️‍🌈","🇺🇳","🇦🇫","🇦🇽","🇦🇱","🇩🇿","🇦🇸"]
+    private var emoji_fruit = ["🍏","🍎","🍐","🍊","🍋","🍌","🍉","🍇","🍓","🍈","🍒","🍑"]
+    private var emoji_buildings = ["⛩","🕋","🕍","🕌","⛪️","🏛","💒","🏩","🏫","🏪","🏨","🏦"]
+    private var emoji_ramdom = ["🦇", "😱", "🙀", "😈", "🎃", "👻", "🍭", "🍬", "🍎", "🐜", "🐍", "🦀"]
+    private var emojiChoices = [emoji_faces, emoji_animals, emoji_flags, emoji_fruit, emoji_buildings, emoji_ramdom]
     
     private var emoji = [Int: String]()
     
     private func emoji(for card: Card) -> String {
-        if emoji[card.identifier] == nil, emojiChoices.count > 0 {
-            emoji[card.identifier] = emojiChoices.remove(at: emojiChoices.count.arc4random)
+        var choice = emojiChoices.count.arc4random()
+        if emoji[card.identifier] == nil, emojiChoices[choice].count > 0 {
+            emoji[card.identifier] = emojiChoices[choice].remove(at: emojiChoices[choice].count.arc4random)
         }
         return emoji[card.identifier] ?? "?"
     }
