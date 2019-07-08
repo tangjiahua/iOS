@@ -58,6 +58,17 @@ struct Concentration {
             cards += [card, card]
         }
         //    TODO: Shuffle the cards
+        //TODO
+        var shuffle_x = 1, shuffle_y = 1
+        var shuffle_Card = Card()
+        for _ in 1...10{
+            shuffle_x = Int(arc4random_uniform(UInt32(cards.count)))
+            shuffle_y = Int(arc4random_uniform(UInt32(cards.count)))
+            shuffle_Card = cards[shuffle_x]
+            cards[shuffle_x] = cards[shuffle_y]
+            cards[shuffle_y] = shuffle_Card
+            
+        }
     }
     
     
