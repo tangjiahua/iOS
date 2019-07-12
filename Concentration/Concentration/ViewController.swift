@@ -2,99 +2,123 @@
 //  ViewController.swift
 //  Concentration
 //
-//  Created by 汤佳桦 on 2019/6/27.
-//  Copyright © 2019 BIT. All rights reserved.
+//  Created by jamfly on 2017/12/26.
+//  Copyright © 2017年 jamfly. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
     
-    private lazy var game: Concentration = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
     
-     var numberOfPairsOfCards: Int{
-        get{
-            return (cardButtons.count+1)/2
-        }
+    private lazy var game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
+    
+    var numberOfPairsOfCards: Int {
+        return (cardsButton.count + 1) / 2
     }
     
-    private(set) var flipCount = 0{
-        didSet{
-            updateFlipCountLabel()
-        }
+
+//    var flipCount = 0 {
+//        didSet {
+//            countLabel.text = "Flips: \(flipCount)"
+//        }
+//    }
+    
+    @IBAction func StartNewGame(_ sender: UIButton) {
+        game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
+        updateViewFromModel()
+        game.flipCount = 0
+        check = [0, 0, 0, 0, 0, 0, 0,0,0,0,0,0]
+        i = 0
+        t = emojiChoices.count.arc4random
     }
     
-    private func updateFlipCountLabel(){
-        let attributes: [NSAttributedString.Key: Any] = [
-            .strokeWidth: 5.0,
-            .strokeColor: #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)
-        ]
-        let attributedString = NSAttributedString(string: "Flips: \(flipCount)", attributes: attributes)
-        CounterLabel.attributedText = attributedString
-    }
     
-    @IBOutlet private  weak var CounterLabel: UILabel!{
-        didSet{
-            updateFlipCountLabel()
-        }
-    }
-    
-    @IBOutlet private var cardButtons: [UIButton]!
-    
-    
+    @IBOutlet private weak var countLabel: UILabel!
+    @IBOutlet private var cardsButton: [UIButton]!
     
     @IBAction private func touchCard(_ sender: UIButton) {
-        flipCount += 1
-        if let cardNumber = cardButtons.firstIndex(of: sender){
+       
+        if let cardNumber = cardsButton.index(of: sender) {
             game.chooseCard(at: cardNumber)
             updateViewFromModel()
-        }else{
-            print("chosen card was not in cardBUttons")
+        } else {
+            print("chosen card was not in cardButtons")
+        }
+    }
+    
+    
+    private func updateViewFromModel() {
+        countLabel.text = "Flips: \(game.flipCount)"
+        for index in cardsButton.indices {
+            let button = cardsButton[index]
+            let card = game.cards[index]
+            if card.isFaceUp {
+                button.setTitle(emoji(for: card), for: UIControlState.normal)
+                button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            } else {
+                button.setTitle("", for: UIControlState.normal)
+                button.backgroundColor = card.isMatched ? #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 0) : #colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 1)
+                
+            }
+        }
+    }
+    
+    private var emoji_faces = ["😀","😅","😇","😢","😳","🤓","😜","😠","😫","🧐","🥰","😍"]
+    private var emoji_animals = ["🐶","🐱","🐭","🐹","🐰","🦊","🐻","🐼","🐨","🐯","🦁","🐮"]
+    private var emoji_flags = ["🏳️","🏴","🏴‍☠️","🏁","🚩","🏳️‍🌈","🇺🇳","🇦🇫","🇦🇽","🇦🇱","🇩🇿","🇦🇸"]
+    private var emoji_fruit = ["🍏","🍎","🍐","🍊","🍋","🍌","🍉","🍇","🍓","🍈","🍒","🍑"]
+    private var emoji_buildings = ["⛩","🕋","🕍","🕌","⛪️","🏛","💒","🏩","🏫","🏪","🏨","🏦"]
+    private var emoji_ramdom = ["🦇", "😱", "🙀", "😈", "🎃", "👻", "🍭", "🍬", "🍎", "🐜", "🐍", "🦀"]
+    
+    lazy private var emojiChoices = [emoji_animals, emoji_faces,emoji_flags, emoji_fruit, emoji_buildings, emoji_ramdom]
+    
+    private var emoji = [Int: String]()
+    
+    lazy private var t = emojiChoices.count.arc4random
+    
+    var i = 0
+    var check = [0, 0, 0, 0, 0, 0,0,0,0,0,0,0]
+    private func emoji(for card: Card) -> String {
+        if emoji[card.identifier] == nil{
+            i = 0
+            while(check[i] != 0){
+                i = emojiChoices[t].count.arc4random
+            }
+            check[i] = 1
+            emoji[card.identifier] = emojiChoices[t][i]
+        }
+        return emoji[card.identifier] ?? "?"
+    }
+    
+    
+}
+
+// MARK: extention
+extension Int {
+    
+    var arc4random: Int {
+        if self > 0 {
+            return Int(arc4random_uniform(UInt32(self)))
+        } else if self < 0 {
+            return -Int(arc4random_uniform(UInt32(self)))
+        } else {
+            return 0
         }
         
     }
     
-    private func updateViewFromModel(){
-        for index in cardButtons.indices{
-            let button = cardButtons[index]
-            let card = game.cards[index]
-            if card.isFaceup{
-                button.setTitle(emoji(for: card), for: UIControl.State.normal)
-                button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            }
-            else{
-                button.setTitle("", for: UIControl.State.normal)
-                button.backgroundColor = card.isMactched ? #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) : #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)
-            }
-        }
-    }
     
-    //private var emojiChoice = ["🧧", "🎃", "👻", "🥰","🐭","🕷", "🐞", "🏀","🐵"]
-    private var emojiChoice = "🧧🎃👻🥰🐭🕷🐞🏀🐵"
-
-    
-    private var emoji = [Card: String]()
-    
-    private func emoji(for card: Card) -> String {
-        if emoji[card] == nil, emojiChoice.count > 0 {
-            let ramdomStringIndex = emojiChoice.index(emojiChoice.startIndex, offsetBy: emojiChoice.count.arc4ramdom)
-            emoji[card] = String(emojiChoice.remove(at: ramdomStringIndex))
-        }
-        return emoji[card] ?? "?"
-    }
 }
 
-extension Int {
-    var arc4ramdom: Int{
-        if self > 0{
-            return Int(arc4random_uniform(UInt32(self)))
 
-        }
-        else if self < 0{
-            return -Int(arc4random_uniform(UInt32(abs(self))))
-        }
-        else{
-            return 0
-        }
-    }
-}
+
+
+
+
+
+
+
+
+
+

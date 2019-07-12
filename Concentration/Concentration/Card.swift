@@ -2,32 +2,35 @@
 //  Card.swift
 //  Concentration
 //
-//  Created by 汤佳桦 on 2019/6/29.
-//  Copyright © 2019 BIT. All rights reserved.
+//  Created by jamfly on 2017/12/27.
+//  Copyright © 2017年 jamfly. All rights reserved.
 //
 
 import Foundation
-//No inherit
-//Are value types, provide copy; class is reference type,pointers, stacks
-struct Card: Hashable{
+
+struct Card {
     
-    var hashValue: Int{return identifier}
+    var isFaceUp = false
+    var isMatched = false
+    private(set) var identifier: Int
+    var FaceUped = false
     
-    static func ==(lhs: Card, rhs: Card)->Bool{
-        return lhs.identifier == rhs.identifier
-    }
-    var isFaceup = false
-    var isMactched = false
-    private var identifier: Int
+    private static var identifierFactor = 0
     
-    private static var identifierFactory = 0
-    
-    private static func getUniqueIdentifier() -> Int{
-        identifierFactory += 1//because of static identifierfactory
-        return Card.identifierFactory
+    private static func getUniqueIdentifier() -> Int {
+        identifierFactor += 1
+        return identifierFactor
     }
     
-    init(){
+    
+    init() {
         self.identifier = Card.getUniqueIdentifier()
     }
+    
 }
+
+
+
+
+
+
