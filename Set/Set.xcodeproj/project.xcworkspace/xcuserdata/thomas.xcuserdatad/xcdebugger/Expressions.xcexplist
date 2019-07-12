@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "SetDeck.check():SetDeck.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "chosenCards[index]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SetDeck.chooseCard(at:):SetDeck.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "chosenCards">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
