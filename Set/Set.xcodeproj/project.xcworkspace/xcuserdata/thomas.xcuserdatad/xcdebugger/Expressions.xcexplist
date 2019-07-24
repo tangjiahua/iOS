@@ -3,6 +3,14 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "SetDeck.replace():SetDeck.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cards.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "SetDeck.check():SetDeck.swift">
          <PersistentStrings>
             <PersistentString
@@ -17,6 +25,28 @@
                value = "chosenCards">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SetDeck.find():SetDeck.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cardsOnDeck.count">
+            </PersistentString>
+            <PersistentString
+               value = "chosenCards">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ViewController.updateView():ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cardsOnDeck">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SetDeck.checkInFind(card_a:card_b:card_c:):SetDeck.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

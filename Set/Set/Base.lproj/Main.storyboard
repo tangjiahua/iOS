@@ -230,6 +230,16 @@
                                     <action selector="threeMore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dw5-uQ-PKW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhs-my-9i3" colorLabel="IBBuiltInLabel-Purple">
+                                <rect key="frame" x="210" y="666" width="184" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Tips"/>
+                                <connections>
+                                    <action selector="touchTips:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TuH-fN-tBj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

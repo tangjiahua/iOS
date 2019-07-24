@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func threeMore(_ sender: UIButton) -> Void {
-        if deck.chosenCards.count >= 3 , deck.check()
+        if deck.chosenCards.count == 3 , deck.check()
         {
             deck.replace()
             updateView()
@@ -48,6 +48,11 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func touchTips(_ sender: UIButton) {
+        if(deck.find()){
+            updateView()
+        }
+    }
     
     
     func updateView(){
@@ -93,7 +98,7 @@ class ViewController: UIViewController {
             .strokeColor: ModelToView.colors[card.color]!,
             .strokeWidth: ModelToView.strokeWidth[card.border]!,
             .foregroundColor: ModelToView.colors[card.color]!.withAlphaComponent(ModelToView.borders[card.border]!),
-            NSAttributedString.Key.font:UIFont.systemFont(ofSize: 20)
+            NSAttributedString.Key.font:UIFont.systemFont(ofSize: 30)
         ]
         var cardTitle = ModelToView.shapes[card.shape]!
         
