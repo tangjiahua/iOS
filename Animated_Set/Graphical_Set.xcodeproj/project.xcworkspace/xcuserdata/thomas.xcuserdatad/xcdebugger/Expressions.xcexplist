@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "SetViewController.updateViewFromModelFirstTime():SetViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cardsOnScreen">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SetGrid.calculateGridDimensions():SetGrid.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "bestGridDimensions">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SetViewController.dealFirstTime():SetViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.cardsOnScreen">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SetViewController.tapCard(_:):SetViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedcard">
+            </PersistentString>
+            <PersistentString
+               value = "isSet">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
