@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:../../../../../Downloads/DouYinComment-master/DouYinCComment/DouYinCComment/DouYinPlay/Third/YYKit"
+      name = "YYKit">
+      <Group
+         location = "group:YYCache"
+         name = "YYCache">
+      </Group>
+      <Group
+         location = "group:YYText"
+         name = "YYText">
+         <Group
+            location = "group:Component"
+            name = "Component">
+         </Group>
+         <Group
+            location = "group:String"
+            name = "String">
+         </Group>
+         <Group
+            location = "group:Utility"
+            name = "Utility">
+         </Group>
+      </Group>
+      <Group
+         location = "group:YYModel"
+         name = "YYModel">
+      </Group>
+   </Group>
+   <FileRef
+      location = "self:/Users/alanyoung/Documents/ObjectiveC/Course8/Test/MiniTiktok.xcodeproj">
+   </FileRef>
+</Workspace>

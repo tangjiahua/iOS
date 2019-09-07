@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1177F07522E19F5100549479 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1177F07422E19F5100549479 /* AppDelegate.m */; };
+		1177F07B22E19F5100549479 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1177F07922E19F5100549479 /* Main.storyboard */; };
+		1177F07D22E19F5200549479 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1177F07C22E19F5200549479 /* Assets.xcassets */; };
+		1177F08022E19F5200549479 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1177F07E22E19F5200549479 /* LaunchScreen.storyboard */; };
+		1177F08322E19F5200549479 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1177F08222E19F5200549479 /* main.m */; };
+		1177F08B22E1A05600549479 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1177F08A22E1A05600549479 /* CameraViewController.m */; };
+		1177F0AC22E2E6CC00549479 /* NavigationLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1177F0AB22E2E6CC00549479 /* NavigationLabel.m */; };
+		1177F0B022E2F6D200549479 /* ItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1177F0AF22E2F6D200549479 /* ItemModel.m */; };
+		1177F0BA22E308C900549479 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1177F0B922E308C900549479 /* DataManager.m */; };
+		1177F0BE22E30CBE00549479 /* ImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1177F0BD22E30CBE00549479 /* ImageDownloader.m */; };
+		1177F0C422E30DE200549479 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1177F0C322E30DE200549479 /* ListViewController.m */; };
+		1177F0C722E30E3800549479 /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1177F0C622E30E3800549479 /* ListTableViewCell.m */; };
+		1177F0CC22E405F200549479 /* CommentListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1177F0CB22E405F200549479 /* CommentListView.m */; };
+		1177F1AD22E41FFF00549479 /* LikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1177F1AC22E41FFF00549479 /* LikeButton.m */; };
+		1177F1B022E45B1E00549479 /* YPDouYinLikeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1177F1AE22E45B1E00549479 /* YPDouYinLikeAnimation.m */; };
+		C2DC9DC322E4D29A004C749F /* MMLEffectGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DC9DB322E4D29A004C749F /* MMLEffectGenerator.m */; };
+		C2DC9DC422E4D29A004C749F /* MMLDemoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DC9DB422E4D29A004C749F /* MMLDemoItem.m */; };
+		C2DC9DC522E4D29A004C749F /* Vignette.cikernel in Resources */ = {isa = PBXBuildFile; fileRef = C2DC9DB522E4D29A004C749F /* Vignette.cikernel */; };
+		C2DC9DC622E4D29A004C749F /* MMLGrayscaleFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DC9DB722E4D29A004C749F /* MMLGrayscaleFilter.m */; };
+		C2DC9DC722E4D29A004C749F /* MMLCameraInteractionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DC9DB822E4D29A004C749F /* MMLCameraInteractionView.m */; };
+		C2DC9DC822E4D29A004C749F /* MMLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DC9DB922E4D29A004C749F /* MMLCameraViewController.m */; };
+		C2DC9DC922E4D29A004C749F /* MMLSimpleCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DC9DBA22E4D29A004C749F /* MMLSimpleCameraViewController.m */; };
+		C2DC9DCA22E4D29A004C749F /* MMLVignetteFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DC9DBB22E4D29A004C749F /* MMLVignetteFilter.m */; };
+		C2DC9DCB22E4D29A004C749F /* MMLCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DC9DBC22E4D29A004C749F /* MMLCameraController.m */; };
+		C2DC9DCC22E4D29A004C749F /* MMLMovieWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DC9DBE22E4D29A004C749F /* MMLMovieWriter.m */; };
+		C2DC9DCD22E4D29A004C749F /* MMLHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2DC9DC122E4D29A004C749F /* MMLHomeViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1177F07022E19F5100549479 /* MiniTiktok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniTiktok.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1177F07322E19F5100549479 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1177F07422E19F5100549479 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1177F07A22E19F5100549479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1177F07C22E19F5200549479 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1177F07F22E19F5200549479 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1177F08122E19F5200549479 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1177F08222E19F5200549479 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1177F08922E1A05600549479 /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		1177F08A22E1A05600549479 /* CameraViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		1177F0AA22E2E6CC00549479 /* NavigationLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationLabel.h; sourceTree = "<group>"; };
+		1177F0AB22E2E6CC00549479 /* NavigationLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationLabel.m; sourceTree = "<group>"; };
+		1177F0AE22E2F6D200549479 /* ItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemModel.h; sourceTree = "<group>"; };
+		1177F0AF22E2F6D200549479 /* ItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemModel.m; sourceTree = "<group>"; };
+		1177F0B822E308C900549479 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		1177F0B922E308C900549479 /* DataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		1177F0BC22E30CBE00549479 /* ImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageDownloader.h; sourceTree = "<group>"; };
+		1177F0BD22E30CBE00549479 /* ImageDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageDownloader.m; sourceTree = "<group>"; };
+		1177F0C222E30DE200549479 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		1177F0C322E30DE200549479 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		1177F0C522E30E3800549479 /* ListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
+		1177F0C622E30E3800549479 /* ListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
+		1177F0CA22E405F200549479 /* CommentListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommentListView.h; sourceTree = "<group>"; };
+		1177F0CB22E405F200549479 /* CommentListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommentListView.m; sourceTree = "<group>"; };
+		1177F1AB22E41FFF00549479 /* LikeButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LikeButton.h; sourceTree = "<group>"; };
+		1177F1AC22E41FFF00549479 /* LikeButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LikeButton.m; sourceTree = "<group>"; };
+		1177F1AE22E45B1E00549479 /* YPDouYinLikeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YPDouYinLikeAnimation.m; sourceTree = "<group>"; };
+		1177F1AF22E45B1E00549479 /* YPDouYinLikeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YPDouYinLikeAnimation.h; sourceTree = "<group>"; };
+		C2DC9DAE22E4D29A004C749F /* MMLCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLCameraViewController.h; sourceTree = "<group>"; };
+		C2DC9DAF22E4D29A004C749F /* MMLVignetteFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLVignetteFilter.h; sourceTree = "<group>"; };
+		C2DC9DB022E4D29A004C749F /* MMLCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLCameraController.h; sourceTree = "<group>"; };
+		C2DC9DB122E4D29A004C749F /* MMLSimpleCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLSimpleCameraViewController.h; sourceTree = "<group>"; };
+		C2DC9DB222E4D29A004C749F /* MMLMovieWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLMovieWriter.h; sourceTree = "<group>"; };
+		C2DC9DB322E4D29A004C749F /* MMLEffectGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLEffectGenerator.m; sourceTree = "<group>"; };
+		C2DC9DB422E4D29A004C749F /* MMLDemoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLDemoItem.m; sourceTree = "<group>"; };
+		C2DC9DB522E4D29A004C749F /* Vignette.cikernel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Vignette.cikernel; sourceTree = "<group>"; };
+		C2DC9DB622E4D29A004C749F /* MMLHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLHomeViewController.h; sourceTree = "<group>"; };
+		C2DC9DB722E4D29A004C749F /* MMLGrayscaleFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLGrayscaleFilter.m; sourceTree = "<group>"; };
+		C2DC9DB822E4D29A004C749F /* MMLCameraInteractionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLCameraInteractionView.m; sourceTree = "<group>"; };
+		C2DC9DB922E4D29A004C749F /* MMLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLCameraViewController.m; sourceTree = "<group>"; };
+		C2DC9DBA22E4D29A004C749F /* MMLSimpleCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLSimpleCameraViewController.m; sourceTree = "<group>"; };
+		C2DC9DBB22E4D29A004C749F /* MMLVignetteFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLVignetteFilter.m; sourceTree = "<group>"; };
+		C2DC9DBC22E4D29A004C749F /* MMLCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLCameraController.m; sourceTree = "<group>"; };
+		C2DC9DBD22E4D29A004C749F /* MMLEffectGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLEffectGenerator.h; sourceTree = "<group>"; };
+		C2DC9DBE22E4D29A004C749F /* MMLMovieWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLMovieWriter.m; sourceTree = "<group>"; };
+		C2DC9DBF22E4D29A004C749F /* MMLCameraInteractionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLCameraInteractionView.h; sourceTree = "<group>"; };
+		C2DC9DC022E4D29A004C749F /* MMLGrayscaleFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLGrayscaleFilter.h; sourceTree = "<group>"; };
+		C2DC9DC122E4D29A004C749F /* MMLHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLHomeViewController.m; sourceTree = "<group>"; };
+		C2DC9DC222E4D29A004C749F /* MMLDemoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLDemoItem.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1177F06D22E19F5100549479 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1177F06722E19F5100549479 = {
+			isa = PBXGroup;
+			children = (
+				1177F0B122E2F73200549479 /* AppFoundation */,
+				1177F0B222E2F75200549479 /* UI */,
+				1177F0AD22E2F6B700549479 /* Model */,
+				1177F0B722E3087700549479 /* DataManager */,
+				1177F1A922E41FBA00549479 /* Animation */,
+				1177F07122E19F5100549479 /* Products */,
+				C2DC9DAD22E4D29A004C749F /* camera */,
+			);
+			sourceTree = "<group>";
+		};
+		1177F07122E19F5100549479 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1177F07022E19F5100549479 /* MiniTiktok.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1177F0AD22E2F6B700549479 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1177F0AE22E2F6D200549479 /* ItemModel.h */,
+				1177F0AF22E2F6D200549479 /* ItemModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1177F0B122E2F73200549479 /* AppFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				1177F07322E19F5100549479 /* AppDelegate.h */,
+				1177F07422E19F5100549479 /* AppDelegate.m */,
+				1177F07922E19F5100549479 /* Main.storyboard */,
+				1177F07E22E19F5200549479 /* LaunchScreen.storyboard */,
+				1177F07C22E19F5200549479 /* Assets.xcassets */,
+				1177F08122E19F5200549479 /* Info.plist */,
+				1177F08222E19F5200549479 /* main.m */,
+			);
+			path = AppFoundation;
+			sourceTree = "<group>";
+		};
+		1177F0B222E2F75200549479 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1177F1AA22E41FE200549479 /* LikeButton */,
+				1177F0C922E405A400549479 /* Comment */,
+				1177F0B522E2F78300549479 /* Camera */,
+				1177F0B322E2F75700549479 /* List */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1177F0B322E2F75700549479 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				1177F0AA22E2E6CC00549479 /* NavigationLabel.h */,
+				1177F0AB22E2E6CC00549479 /* NavigationLabel.m */,
+				1177F0C222E30DE200549479 /* ListViewController.h */,
+				1177F0C322E30DE200549479 /* ListViewController.m */,
+				1177F0C522E30E3800549479 /* ListTableViewCell.h */,
+				1177F0C622E30E3800549479 /* ListTableViewCell.m */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		1177F0B522E2F78300549479 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				1177F08922E1A05600549479 /* CameraViewController.h */,
+				1177F08A22E1A05600549479 /* CameraViewController.m */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		1177F0B722E3087700549479 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				1177F0B822E308C900549479 /* DataManager.h */,
+				1177F0B922E308C900549479 /* DataManager.m */,
+				1177F0BC22E30CBE00549479 /* ImageDownloader.h */,
+				1177F0BD22E30CBE00549479 /* ImageDownloader.m */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		1177F0C922E405A400549479 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				1177F0CA22E405F200549479 /* CommentListView.h */,
+				1177F0CB22E405F200549479 /* CommentListView.m */,
+			);
+			path = Comment;
+			sourceTree = "<group>";
+		};
+		1177F1A922E41FBA00549479 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				1177F1AF22E45B1E00549479 /* YPDouYinLikeAnimation.h */,
+				1177F1AE22E45B1E00549479 /* YPDouYinLikeAnimation.m */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		1177F1AA22E41FE200549479 /* LikeButton */ = {
+			isa = PBXGroup;
+			children = (
+				1177F1AB22E41FFF00549479 /* LikeButton.h */,
+				1177F1AC22E41FFF00549479 /* LikeButton.m */,
+			);
+			path = LikeButton;
+			sourceTree = "<group>";
+		};
+		C2DC9DAD22E4D29A004C749F /* camera */ = {
+			isa = PBXGroup;
+			children = (
+				C2DC9DAE22E4D29A004C749F /* MMLCameraViewController.h */,
+				C2DC9DAF22E4D29A004C749F /* MMLVignetteFilter.h */,
+				C2DC9DB022E4D29A004C749F /* MMLCameraController.h */,
+				C2DC9DB122E4D29A004C749F /* MMLSimpleCameraViewController.h */,
+				C2DC9DB222E4D29A004C749F /* MMLMovieWriter.h */,
+				C2DC9DB322E4D29A004C749F /* MMLEffectGenerator.m */,
+				C2DC9DB422E4D29A004C749F /* MMLDemoItem.m */,
+				C2DC9DB522E4D29A004C749F /* Vignette.cikernel */,
+				C2DC9DB622E4D29A004C749F /* MMLHomeViewController.h */,
+				C2DC9DB722E4D29A004C749F /* MMLGrayscaleFilter.m */,
+				C2DC9DB822E4D29A004C749F /* MMLCameraInteractionView.m */,
+				C2DC9DB922E4D29A004C749F /* MMLCameraViewController.m */,
+				C2DC9DBA22E4D29A004C749F /* MMLSimpleCameraViewController.m */,
+				C2DC9DBB22E4D29A004C749F /* MMLVignetteFilter.m */,
+				C2DC9DBC22E4D29A004C749F /* MMLCameraController.m */,
+				C2DC9DBD22E4D29A004C749F /* MMLEffectGenerator.h */,
+				C2DC9DBE22E4D29A004C749F /* MMLMovieWriter.m */,
+				C2DC9DBF22E4D29A004C749F /* MMLCameraInteractionView.h */,
+				C2DC9DC022E4D29A004C749F /* MMLGrayscaleFilter.h */,
+				C2DC9DC122E4D29A004C749F /* MMLHomeViewController.m */,
+				C2DC9DC222E4D29A004C749F /* MMLDemoItem.h */,
+			);
+			path = camera;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1177F06F22E19F5100549479 /* MiniTiktok */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1177F08622E19F5200549479 /* Build configuration list for PBXNativeTarget "MiniTiktok" */;
+			buildPhases = (
+				1177F06C22E19F5100549479 /* Sources */,
+				1177F06D22E19F5100549479 /* Frameworks */,
+				1177F06E22E19F5100549479 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MiniTiktok;
+			productName = Test;
+			productReference = 1177F07022E19F5100549479 /* MiniTiktok.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1177F06822E19F5100549479 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Alan Young";
+				TargetAttributes = {
+					1177F06F22E19F5100549479 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 1177F06B22E19F5100549479 /* Build configuration list for PBXProject "MiniTiktok" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1177F06722E19F5100549479;
+			productRefGroup = 1177F07122E19F5100549479 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1177F06F22E19F5100549479 /* MiniTiktok */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1177F06E22E19F5100549479 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1177F08022E19F5200549479 /* LaunchScreen.storyboard in Resources */,
+				1177F07D22E19F5200549479 /* Assets.xcassets in Resources */,
+				C2DC9DC522E4D29A004C749F /* Vignette.cikernel in Resources */,
+				1177F07B22E19F5100549479 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1177F06C22E19F5100549479 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1177F0C722E30E3800549479 /* ListTableViewCell.m in Sources */,
+				1177F08B22E1A05600549479 /* CameraViewController.m in Sources */,
+				C2DC9DCA22E4D29A004C749F /* MMLVignetteFilter.m in Sources */,
+				1177F0BA22E308C900549479 /* DataManager.m in Sources */,
+				1177F0C422E30DE200549479 /* ListViewController.m in Sources */,
+				C2DC9DCC22E4D29A004C749F /* MMLMovieWriter.m in Sources */,
+				C2DC9DCD22E4D29A004C749F /* MMLHomeViewController.m in Sources */,
+				1177F0B022E2F6D200549479 /* ItemModel.m in Sources */,
+				C2DC9DC322E4D29A004C749F /* MMLEffectGenerator.m in Sources */,
+				1177F08322E19F5200549479 /* main.m in Sources */,
+				1177F0CC22E405F200549479 /* CommentListView.m in Sources */,
+				C2DC9DC822E4D29A004C749F /* MMLCameraViewController.m in Sources */,
+				C2DC9DC422E4D29A004C749F /* MMLDemoItem.m in Sources */,
+				C2DC9DCB22E4D29A004C749F /* MMLCameraController.m in Sources */,
+				1177F1B022E45B1E00549479 /* YPDouYinLikeAnimation.m in Sources */,
+				1177F0AC22E2E6CC00549479 /* NavigationLabel.m in Sources */,
+				C2DC9DC922E4D29A004C749F /* MMLSimpleCameraViewController.m in Sources */,
+				1177F1AD22E41FFF00549479 /* LikeButton.m in Sources */,
+				1177F0BE22E30CBE00549479 /* ImageDownloader.m in Sources */,
+				1177F07522E19F5100549479 /* AppDelegate.m in Sources */,
+				C2DC9DC622E4D29A004C749F /* MMLGrayscaleFilter.m in Sources */,
+				C2DC9DC722E4D29A004C749F /* MMLCameraInteractionView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1177F07922E19F5100549479 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1177F07A22E19F5100549479 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1177F07E22E19F5200549479 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1177F07F22E19F5200549479 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1177F08422E19F5200549479 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1177F08522E19F5200549479 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1177F08722E19F5200549479 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/AppFoundation/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.bit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1177F08822E19F5200549479 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/AppFoundation/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.bit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1177F06B22E19F5100549479 /* Build configuration list for PBXProject "MiniTiktok" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1177F08422E19F5200549479 /* Debug */,
+				1177F08522E19F5200549479 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1177F08622E19F5200549479 /* Build configuration list for PBXNativeTarget "MiniTiktok" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1177F08722E19F5200549479 /* Debug */,
+				1177F08822E19F5200549479 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1177F06822E19F5100549479 /* Project object */;
+}
